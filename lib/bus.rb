@@ -1,18 +1,3 @@
-#pry(main)> require './lib/bus'
-#=> true
-
-#pry(main)> bus = Bus.new('Mikes Awesome Bus', 4)
-#=> #<Bus:0x00007fed7c11dbd8 @capacity=4, @name="Mikes Awesome Bus", @passengers=[]>
-
-#pry(main)> bus.name
-#=> "Mikes Awesome Bus"
-
-#pry(main)> bus.capacity
-#=> 4
-
-#pry(main)> bus.passengers
-#=> []
-
 class Bus
   attr_reader :name, :capacity, :passengers
   def initialize(name, capacity)
@@ -31,7 +16,7 @@ class Bus
 
   def number_of_passengers
     @passengers.length
-  end 
+  end
 
   def over_capacity?
     if passengers.length > 4
