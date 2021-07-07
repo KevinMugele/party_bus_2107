@@ -29,6 +29,10 @@ class Bus
     passengers.map!(&:upcase)
   end
 
+  def number_of_passengers
+    @passengers.length
+  end 
+
   def over_capacity?
     if passengers.length > 4
       true
